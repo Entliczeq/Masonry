@@ -1,0 +1,240 @@
+@import url("./counter.css");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  --background: #16161a;
+  --secondary-background: #1f2123;
+  --noise: ;
+
+  --clr-headline: #fffffe;
+  --clr-paragraph: #94a1b2;
+
+  --clr-highlight: #7f5af0;
+  --clr-accent: #2cb67d;
+
+  --ff-headline: "Montserrat", sans-serif;
+  --ff-paragraph: "Roboto", sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  font-family: var(--ff-paragraph);
+  line-height: 1.2;
+}
+
+body {
+  padding: 2em 0;
+}
+
+#grid {
+  margin: 0 auto;
+}
+
+.card {
+  color: var(--clr-headline);
+  /* margin: 1% 1vw; */
+  margin-bottom: 1em;
+  border-radius: 5px;
+  width: 300px;
+  background-color: var(--secondary-background);
+  overflow: hidden;
+  position: relative;
+  height: auto;
+  filter: drop-shadow(0 0 0.75em rgba(0, 0, 0, 0.5));
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.c-content {
+  padding: 5%;
+  z-index: 2;
+  mix-blend-mode: difference;
+}
+
+.c-title {
+  font-size: 1.5rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+  font-family: var(--ff-headline);
+  letter-spacing: 2px;
+  font-weight: 380;
+}
+
+.c-par {
+  padding: 1em 0;
+}
+
+.c-tagline {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  padding-bottom: 0.25em;
+  letter-spacing: 2px;
+}
+
+.c-desc {
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.c-bottom {
+  display: flex;
+  align-items: center;
+}
+
+.episodes {
+  margin-left: 0.5em;
+  font-size: 0.85rem;
+}
+
+.seasons,
+.episodes,
+.c-year,
+.c-desc {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  font-weight: 300;
+}
+.episodes span,
+.seasons span {
+  font-weight: 700;
+}
+
+.network {
+  margin-left: auto;
+}
+
+.network img {
+  height: 1.75rem;
+  max-width: 2.75rem;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.nav-box {
+  width: 31.333%;
+  margin: 1%;
+  height: 20em;
+  border-radius: 5px;
+  display: flex;
+  text-decoration: none;
+  padding: 2em;
+  justify-content: flex-end;
+  align-items: flex-end;
+  transition: transform 250ms cubic-bezier(0.57, 0.21, 0.69, 1.25);
+  filter: drop-shadow(0 0 0.75em rgba(0, 0, 0, 0.5));
+}
+
+.nav-box:hover {
+  transform: scale(1.025);
+}
+
+.bg0001 {
+  background: url("../bg/bg0001.jpg");
+  background-position: right 100%;
+  background-size: cover;
+}
+
+.bg0002 {
+  background: url("../bg/bg0002.jpg");
+  background-position: right 100%;
+  background-size: cover;
+}
+
+.bg0003 {
+  background: url("../bg/bg0003.jpg");
+  background-position: right 100%;
+  background-size: cover;
+}
+
+.nav-box h2 {
+  color: var(--clr-headline);
+  font-family: var(--ff-headline);
+  font-weight: 300;
+  font-size: 3rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+@media (max-width: calc(300px * 8 + 2vw * 8)) {
+  #grid,
+  .nav {
+    width: calc(300px * 7 + 2vw * 7);
+  }
+}
+@media (max-width: calc(300px * 7 + 2vw * 7)) {
+  #grid,
+  .nav {
+    width: calc(300px * 6 + 2vw * 6);
+  }
+}
+
+@media (max-width: calc(300px * 6 + 2vw * 6)) {
+  #grid,
+  .nav {
+    width: calc(300px * 5 + 2vw * 5);
+  }
+}
+
+@media (max-width: calc(300px * 5 + 2vw * 5)) {
+  #grid,
+  .nav {
+    width: calc(300px * 4 + 2vw * 4);
+  }
+}
+
+@media (max-width: calc(300px * 4 + 2vw * 4)) {
+  #grid,
+  .nav {
+    width: calc(300px * 3 + 2vw * 3);
+  }
+}
+
+@media (max-width: calc(300px * 3 + 2vw * 3)) {
+  #grid,
+  .nav {
+    width: calc(300px * 2 + 2vw * 2);
+  }
+  .nav-box {
+    width: 98%;
+    margin-bottom: 2em;
+  }
+}
+
+@media (max-width: calc(300px * 2  + 2vw * 2)) {
+  #grid,
+  .nav {
+    width: calc(300px + 2vw);
+  }
+  .card {
+    margin-bottom: 2em;
+  }
+  .nav-box {
+    width: 98%;
+    margin-bottom: 2em;
+  }
+}
+
+button {
+  font-size: 20px;
+}
