@@ -3,8 +3,8 @@ import { tvShows, tvShowsNow, tvShowsFuture } from "./imports/shows.js";
 // const grid = document.querySelector("#grid");
 
 // When DOM loads, render the first 20 posts.
-document.addEventListener("DOMContentLoaded", appendCards);
 
+window.addEventListener("DOMContentLoaded", appendCards);
 
 
 var grid = document.querySelector(".grid");
