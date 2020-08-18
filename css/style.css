@@ -40,6 +40,7 @@ body {
 
 #grid {
   margin: 0 auto;
+  min-height: 120vh; // Just to enable scrolling
 }
 
 .card {
