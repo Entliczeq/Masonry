@@ -5,12 +5,7 @@ import { tvShows, tvShowsNow, tvShowsFuture } from "./imports/shows.js";
 // When DOM loads, render the first 20 posts.
 document.addEventListener("DOMContentLoaded", appendCards);
 
-// If scrolled to bottom, load the next 20 posts.
-window.onscroll = () => {
-  if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-    appendCards();
-  }
-};
+
 
 var grid = document.querySelector(".grid");
 var msnry;
@@ -61,6 +56,13 @@ function appendCards() {
   // add and lay out newly appended elements
   msnry.appended(elems);
 }
+
+// If scrolled to bottom, load the next 20 posts.
+window.onscroll = () => {
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+    appendCards();
+  }
+};
 
 // create <div class="card"></div>
 function getItemElement() {
